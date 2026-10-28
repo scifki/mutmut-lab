@@ -1,0 +1,13 @@
+﻿CMD> Copy-Item grading.py grading.py.bak
+CMD> python -m mutmut apply 7
+CMD> Select-String -Path grading.py -Pattern 'score > 90'
+            if score > 90:
+CMD> python -m pytest -q
+........                                                                 [100%]
+8 passed in 0.01s
+CMD> Copy-Item grading.py.bak grading.py
+CMD> Select-String -Path grading.py -Pattern 'score >= 90'
+            if score >= 90:
+CMD> python -m pytest -q
+........                                                                 [100%]
+8 passed in 0.01s
